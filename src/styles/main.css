@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("./../assets/fonts/futura_bdcn_bt_bold.woff") format("woff");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  background: #000000;
+  color: #ffffff;
+}
+
+.header {
+  height: 10vh;
+  width: 95vw;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 10;
+}
+
+.header__logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo span {
+  font-family: "Futura";
+  font-size: 28px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.header__navbar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__navbar__nav {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  letter-spacing: 0.09rem;
+  cursor: pointer;
+}
+
+.header__navbar__nav:last-child {
+  border: 3px solid #38d392;
+}
+
+.footer {
+  width: 100vw;
+  height: 50vh;
+  background-color: rgba(56, 211, 146, 0.14);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+}
+
+.footer__link {
+  font-size: 28px;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero::after {
+  content: "";
+  width: 120%;
+  height: 100%;
+  background: rgba(56, 211, 146, 0.14);
+  position: absolute;
+  top: -20vh;
+  left: -10%;
+  z-index: -1;
+  -webkit-transform: matrix(0.98, -0.16, -0.19, -0.99, 0, 0);
+          transform: matrix(0.98, -0.16, -0.19, -0.99, 0, 0);
+  border: 20px solid #38d392;
+}
+
+.hero__image {
+  height: 90%;
+  width: 550px;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  z-index: -1;
+}
+
+.hero__content {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  -webkit-transform: translate(-30%, -20%);
+          transform: translate(-30%, -20%);
+  font-size: 108px;
+  font-family: "Futura";
+}
+
+.hero__content__date {
+  font-size: 28px;
+  font-family: "Poppins";
+  background-color: #38d392;
+  padding: 20px;
+  color: #000000;
+  font-weight: 500;
+  font-style: italic;
+  position: relative;
+}
+
+.hero__content__date span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hero__cta {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  right: 10%;
+  padding: 20px;
+  cursor: pointer;
+  border: 3px solid #ffffff;
+  color: #38d392;
+}
+
+.about {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__image {
+  width: 50%;
+}
+
+.about__content {
+  width: 50%;
+  margin: auto;
+}
+
+.about__content h1 {
+  padding: 20px 0px;
+  position: absolute;
+  top: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 5px solid #38d392;
+  font-size: 108px;
+  font-family: "Futura";
+  margin-bottom: 40px;
+}
+
+.about__content p {
+  font-size: 18px;
+  line-height: 27px;
+  width: 50ch;
+}
+
+.timeline {
+  width: 100vw;
+  height: 100vh;
+}
+/*# sourceMappingURL=main.css.map */

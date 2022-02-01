@@ -1,0 +1,43 @@
+.header {
+  height: 10vh;
+  width: 95vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+
+  &__logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-family: $primary-font;
+      font-size: $normal-text;
+      margin-left: 10px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__navbar {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__nav {
+      color: $tertiary-color;
+      text-transform: uppercase;
+      font-family: $secondary-font;
+      text-decoration: none;
+      font-size: $body-text;
+      padding: 5px 10px;
+      letter-spacing: 0.09rem;
+      cursor: pointer;
+
+      &:last-child {
+        border: 3px solid $secondary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "navItems": [
+    {
+      "name": "home",
+      "link": "/"
+    },
+    {
+      "name": "event",
+      "link": "/events"
+    },
+    {
+      "name": "gallery",
+      "link": "/gallery"
+    },
+    {
+      "name": "sponsor",
+      "link": "/sponsors"
+    },
+    {
+      "name": "team",
+      "link": "/team"
+    },
+    {
+      "name": "register",
+      "link": "/register"
+    }
+  ],
+  "about": {
+    "heading": "ALL ABOUT US",
+    "description": "Asmita is the Annual Sports Fest of IIIT Allahabad. As one of the largest sports fests of India , it is a medium to promote sports and inculcate healthy sportsmanship in young minds in order to feed an arduous tomorrow."
+  }
+}
