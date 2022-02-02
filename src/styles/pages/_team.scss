@@ -1,0 +1,9 @@
+.team {
+  @include section;
+
+  h1 {
+    @include heading;
+    margin-left: 2.5vw;
+    margin-top: 2rem;
+  }
+}

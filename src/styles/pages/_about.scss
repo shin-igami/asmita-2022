@@ -6,12 +6,24 @@
 
   align-items: center;
 
+  @include tablet {
+    flex-direction: column-reverse;
+  }
+
   &__image {
     width: 50%;
+    @include mobile {
+      width: 70%;
+    }
   }
   &__content {
     width: 50%;
     margin: auto;
+
+    @include tablet {
+      width: 80%;
+      margin: auto;
+    }
 
     h1 {
       padding: 20px 0px;
@@ -19,14 +31,33 @@
       top: 0;
       width: fit-content;
       border-bottom: 5px solid $secondary-color;
-      font-size: $heading-text;
+      font-size: $heading2-text;
       font-family: $primary-font;
       margin-bottom: 40px;
+
+      @include tablet {
+        position: relative;
+        font-size: $heading2-text;
+        min-width: 250px;
+      }
+      @include mobile {
+        font-size: $heading3-text;
+      }
     }
     p {
       font-size: $body-text;
       line-height: 27px;
-      width: 50ch;
+      width: 90%;
+      min-width: 30ch;
+
+      @include tablet {
+        width: 80%;
+        min-width: 250px;
+      }
+
+      @include mobile {
+        font-size: $small-text;
+      }
     }
   }
 }

@@ -1,0 +1,8 @@
+.gallery {
+  @include section;
+
+  h1 {
+    margin: 2rem 0 0 2.5vw;
+    @include heading;
+  }
+}

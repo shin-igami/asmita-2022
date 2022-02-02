@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import { FaPlay } from "react-icons/fa"
+import { BiPlay } from "react-icons/bi"
 
 export default function Hero() {
   return (
@@ -9,15 +9,16 @@ export default function Hero() {
         <StaticImage
           src="./../assets/images/hero-image.png"
           alt="asmita iiita sports fest"
+          className="hero__image__hero"
         />
       </div>
       <div className="hero__content">
         ASMITA 2022
         <div className="hero__content__date">
-          23 <span>RD</span> FEBRUARY - 29 <span>TH</span> FEBRUARY
+          12 <span>TH</span> FEBRUARY - 13 <span>TH</span> FEBRUARY
         </div>
       </div>
-      <FaPlay className="hero__cta" />
+      <BiPlay className="hero__cta" />
     </section>
   )
 }

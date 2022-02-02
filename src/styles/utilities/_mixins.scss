@@ -25,15 +25,22 @@
   }
 }
 
-@mixin heading {
-  font-size: 64px;
-  text-shadow: 1.7px 0.7px 0px $primary-color, 2px 1px 0px white;
-  text-align: center;
-  margin: 1rem 1rem;
+@mixin section {
+  width: 100vw;
+  min-height: 100vh;
+}
 
-  width: 100%;
+@mixin heading {
+  font-size: $heading2-text;
+  font-family: $primary-font;
+  text-transform: uppercase;
+  border-bottom: 3px solid $secondary-color;
+  width: fit-content;
+  @include tablet {
+    font-size: $heading2-text;
+  }
   @include mobile {
-    font-size: 36px;
+    font-size: $heading3-text;
   }
 }
 @mixin sub-heading {

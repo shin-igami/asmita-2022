@@ -1,0 +1,8 @@
+.events {
+  @include section;
+
+  h1 {
+    @include heading;
+    margin: 2rem 0 0 2.5vw;
+  }
+}

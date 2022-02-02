@@ -1,11 +1,15 @@
 .header {
-  height: 10vh;
-  width: 95vw;
+  height: 15vh;
+  width: 90vw;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+
+  @include mobile {
+    width: 100vw;
+  }
 
   &__logo {
     flex: 1;
@@ -20,24 +24,48 @@
     }
   }
 
+  &__icon {
+    font-size: 40px;
+    margin-right: 30px;
+    cursor: pointer;
+    z-index: 20;
+  }
+
   &__navbar {
     flex: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    &__nav {
-      color: $tertiary-color;
-      text-transform: uppercase;
-      font-family: $secondary-font;
-      text-decoration: none;
-      font-size: $body-text;
-      padding: 5px 10px;
-      letter-spacing: 0.09rem;
-      cursor: pointer;
+    font-size: $body-text;
+    transition: all 0.8s ease;
 
-      &:last-child {
-        border: 3px solid $secondary-color;
-      }
+    &__mobile {
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      background-color: $primary-color;
+      justify-content: space-evenly;
+      font-size: $normal-text;
+      z-index: 10;
+      right: -150%;
     }
   }
+  &__nav {
+    color: $tertiary-color;
+    text-transform: uppercase;
+    font-family: $secondary-font;
+    text-decoration: none;
+    padding: 5px 10px;
+    letter-spacing: 0.09rem;
+    cursor: pointer;
+
+    &:last-child {
+      border: 3px solid $secondary-color;
+    }
+  }
+}
+.nav__active {
+  right: 0%;
 }

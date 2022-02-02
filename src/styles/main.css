@@ -150,8 +150,8 @@ body {
 }
 
 .header {
-  height: 10vh;
-  width: 95vw;
+  height: 15vh;
+  width: 90vw;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,6 +163,12 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 10;
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    width: 100vw;
+  }
 }
 
 .header__logo {
@@ -184,6 +190,13 @@ body {
   text-transform: uppercase;
 }
 
+.header__icon {
+  font-size: 40px;
+  margin-right: 30px;
+  cursor: pointer;
+  z-index: 20;
+}
+
 .header__navbar {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -196,21 +209,45 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 20px;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
-.header__navbar__nav {
+.header__navbar__mobile {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: #000000;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 28px;
+  z-index: 10;
+  right: -150%;
+}
+
+.header__nav {
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Poppins";
   text-decoration: none;
-  font-size: 18px;
   padding: 5px 10px;
   letter-spacing: 0.09rem;
   cursor: pointer;
 }
 
-.header__navbar__nav:last-child {
+.header__nav:last-child {
   border: 3px solid #38d392;
+}
+
+.nav__active {
+  right: 0%;
 }
 
 .footer {
@@ -261,7 +298,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .hero {
@@ -278,7 +315,7 @@ body {
 .hero::after {
   content: "";
   width: 120%;
-  height: 100%;
+  height: 110%;
   background: rgba(56, 211, 146, 0.14);
   position: absolute;
   top: -20vh;
@@ -289,9 +326,20 @@ body {
   border: 20px solid #38d392;
 }
 
+@media screen and (max-width: 900px) {
+  .hero::after {
+    -webkit-transform: none;
+            transform: none;
+    height: 120%;
+    border: none;
+    -webkit-filter: blur(75.8333px);
+            filter: blur(75.8333px);
+  }
+}
+
 .hero__image {
   height: 90%;
-  width: 550px;
+  width: 50%;
   padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -299,9 +347,27 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: -1;
+}
+
+@media screen and (max-width: 900px) {
+  .hero__image {
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+}
+
+.hero__image__hero {
   -webkit-filter: blur(4px);
           filter: blur(4px);
-  z-index: -1;
+  width: 550px;
 }
 
 .hero__content {
@@ -314,32 +380,90 @@ body {
   font-family: "Futura";
 }
 
+@media screen and (max-width: 900px) {
+  .hero__content {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-45%, -50%);
+            transform: translate(-45%, -50%);
+    font-size: 72px;
+    width: 50%;
+    min-width: 280px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .hero__content {
+    font-size: 54px;
+  }
+}
+
 .hero__content__date {
   font-size: 28px;
   font-family: "Poppins";
   background-color: #38d392;
   padding: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #000000;
   font-weight: 500;
   font-style: italic;
   position: relative;
 }
 
+@media screen and (max-width: 900px) {
+  .hero__content__date {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .hero__content__date {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+}
+
 .hero__content__date span {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 900px) {
+  .hero__content__date span {
+    font-size: 10px;
+  }
 }
 
 .hero__cta {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   top: 50%;
   right: 10%;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   border: 3px solid #ffffff;
   color: #38d392;
+  fill: #38d392;
+}
+
+.hero__cta::after {
+  content: "watch trailer";
+  position: absolute;
+}
+
+@media screen and (max-width: 900px) {
+  .hero__cta {
+    top: 80%;
+    left: 50%;
+    -webkit-transform: translate(-55%, -50%);
+            transform: translate(-55%, -50%);
+  }
 }
 
 .about {
@@ -354,13 +478,35 @@ body {
           align-items: center;
 }
 
+@media screen and (max-width: 900px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .about__image {
   width: 50%;
+}
+
+@media screen and (max-width: 650px) {
+  .about__image {
+    width: 70%;
+  }
 }
 
 .about__content {
   width: 50%;
   margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .about__content {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .about__content h1 {
@@ -371,19 +517,161 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   border-bottom: 5px solid #38d392;
-  font-size: 108px;
+  font-size: 72px;
   font-family: "Futura";
   margin-bottom: 40px;
 }
 
+@media screen and (max-width: 900px) {
+  .about__content h1 {
+    position: relative;
+    font-size: 72px;
+    min-width: 250px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about__content h1 {
+    font-size: 54px;
+  }
+}
+
 .about__content p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 27px;
-  width: 50ch;
+  width: 90%;
+  min-width: 30ch;
+}
+
+@media screen and (max-width: 900px) {
+  .about__content p {
+    width: 80%;
+    min-width: 250px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about__content p {
+    font-size: 14px;
+  }
 }
 
 .timeline {
   width: 100vw;
   height: 100vh;
+}
+
+.team {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.team h1 {
+  font-size: 72px;
+  font-family: "Futura";
+  text-transform: uppercase;
+  border-bottom: 3px solid #38d392;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 2.5vw;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .team h1 {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .team h1 {
+    font-size: 54px;
+  }
+}
+
+.sponsors {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.sponsors h1 {
+  font-size: 72px;
+  font-family: "Futura";
+  text-transform: uppercase;
+  border-bottom: 3px solid #38d392;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 2.5vw;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .sponsors h1 {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .sponsors h1 {
+    font-size: 54px;
+  }
+}
+
+.events {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.events h1 {
+  font-size: 72px;
+  font-family: "Futura";
+  text-transform: uppercase;
+  border-bottom: 3px solid #38d392;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem 0 0 2.5vw;
+}
+
+@media screen and (max-width: 900px) {
+  .events h1 {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .events h1 {
+    font-size: 54px;
+  }
+}
+
+.gallery {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.gallery h1 {
+  margin: 2rem 0 0 2.5vw;
+  font-size: 72px;
+  font-family: "Futura";
+  text-transform: uppercase;
+  border-bottom: 3px solid #38d392;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media screen and (max-width: 900px) {
+  .gallery h1 {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .gallery h1 {
+    font-size: 54px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
