@@ -1,0 +1,37 @@
+.canvas {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  //   background: hsla(141, 54%, 86%, 1);
+
+  //   background: linear-gradient(
+  //     -90deg,
+  //     hsla(141, 54%, 86%, 1) 0%,
+  //     hsla(333, 73%, 85%, 1) 37%,
+  //     hsla(50, 100%, 61%, 1) 100%
+  //   );
+
+  //   background: -moz-linear-gradient(
+  //     -90deg,
+  //     hsla(141, 54%, 86%, 1) 0%,
+  //     hsla(333, 73%, 85%, 1) 37%,
+  //     hsla(50, 100%, 61%, 1) 100%
+  //   );
+
+  //   background: -webkit-linear-gradient(
+  //     -90deg,
+  //     hsla(141, 54%, 86%, 1) 0%,
+  //     hsla(333, 73%, 85%, 1) 37%,
+  //     hsla(50, 100%, 61%, 1) 100%
+  //   );
+}
+.main {
+  margin-top: 10vh;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+}

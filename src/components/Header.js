@@ -43,10 +43,10 @@ export default function Header() {
     <header className="header">
       <div className="header__logo">
         <StaticImage
-          src="./../assets/images/asmita_logo.png"
-          alt="asmita iiita"
+          className="header__image"
+          src="./../assets/images/SVG/h4i_logo.svg"
+          alt="hack for inclusion"
         />
-        <span>asmita</span>
       </div>
 
       {renderIcon()}

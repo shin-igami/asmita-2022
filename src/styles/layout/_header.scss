@@ -1,16 +1,23 @@
 .header {
-  height: 15vh;
+  height: 10vh;
   width: 90vw;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 200;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 5vw;
 
   @include mobile {
     width: 100vw;
   }
 
+  &__image {
+    width: 45px;
+  }
   &__logo {
     flex: 1;
     display: flex;
@@ -56,6 +63,7 @@
     color: $tertiary-color;
     text-transform: uppercase;
     font-family: $secondary-font;
+    font-weight: 500;
     text-decoration: none;
     padding: 5px 10px;
     letter-spacing: 0.09rem;

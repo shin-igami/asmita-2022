@@ -1,8 +1,24 @@
-.gallery {
-  @include section;
+.themes {
+  width: 100vw;
+  height: 250vh;
 
   h1 {
-    margin: 2rem 0 0 2.5vw;
-    @include heading;
+    @include heading();
+    text-align: center;
+    width: 60%;
+    margin: 4rem auto;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  &__image {
+    width: 400px;
+    margin: 2rem;
+    @include mobile {
+      width: 280px;
+    }
   }
 }

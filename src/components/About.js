@@ -5,16 +5,14 @@ import { about } from "./../assets/data/main-data.json"
 export default function About() {
   return (
     <section className="about">
-      <div className="about__image">
-        <StaticImage
-          src="./../assets/images/about-image.png"
-          alt="asmita iiita"
-        />
-      </div>
-
+      <h1 className="about__heading">{about.heading}</h1>
       <div className="about__content">
-        <h1>{about.heading}</h1>
-        <p>{about.description}</p>
+        {about.data.map(data => (
+          <div className="about__content__card">
+            <h1>{data.subheading}</h1>
+            <p>{data.detail}</p>
+          </div>
+        ))}
       </div>
     </section>
   )
