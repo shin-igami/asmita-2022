@@ -1,0 +1,42 @@
+.sponsors {
+  width: 100vw;
+  height: 350vh;
+
+  h1 {
+    @include subHeading;
+    text-align: center;
+    width: 60%;
+    margin: 4rem auto 2rem auto;
+
+    @include mobile {
+      margin-top: 8rem;
+    }
+  }
+  &__images {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__image {
+    width: 150px;
+    margin: 2rem;
+  }
+  &__main_parent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__main {
+    width: 300px;
+
+    @include mobile {
+      width: 250px;
+    }
+  }
+}

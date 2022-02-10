@@ -1,0 +1,60 @@
+.about {
+  width: 100vw;
+  min-height: 100vh;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    @include subHeading();
+    margin: 2rem 4rem;
+  }
+
+  &__content {
+    width: 95%;
+    margin: 0 auto;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(7.5px);
+      -webkit-backdrop-filter: blur(7.5px);
+      border-radius: 10px;
+
+      width: 350px;
+      margin: 15px;
+      padding: 2rem 10px;
+      min-width: 220px;
+
+      @include mobile() {
+        padding: 2rem 20px;
+        &:last-child() {
+          margin-bottom: 4rem;
+        }
+      }
+
+      h1 {
+        font-size: $heading4-text;
+        width: fit-content;
+        text-transform: uppercase;
+        border-bottom: 2px solid $secondary-color;
+        font-weight: 600;
+        font-family: $primary-font;
+
+        @include mobile {
+          font-size: $normal-text;
+        }
+      }
+      p {
+        @include para();
+      }
+    }
+  }
+}

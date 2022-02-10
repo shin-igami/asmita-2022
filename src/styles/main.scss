@@ -1,0 +1,20 @@
+@import "utilities/variables";
+@import "utilities/mixins";
+
+@import "base/reset";
+@import "base/base";
+
+@import "utilities/locomotive";
+@import "components/buttons";
+
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+
+@import "pages/home";
+@import "pages/about";
+@import "pages/timeline";
+@import "pages/team";
+@import "pages/sponsors";
+@import "pages/events";
+@import "pages/gallery";

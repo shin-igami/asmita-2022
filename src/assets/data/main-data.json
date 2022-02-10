@@ -1,0 +1,40 @@
+{
+  "navItems": [
+    {
+      "name": "home",
+      "link": "/"
+    },
+
+    {
+      "name": "themes",
+      "link": "/themes"
+    },
+
+    {
+      "name": "past sponsor",
+      "link": "/sponsors"
+    },
+
+    {
+      "name": "contact",
+      "link": "/contact"
+    }
+  ],
+  "about": {
+    "heading": "What's in the store ?",
+    "data": [
+      {
+        "subheading": "Hackathon",
+        "detail": "A 36 hour long premier hackathon, with the aim to create a safe space to ideate, design, build and pitch your innovative products to some of the best developers in the country, with prizes over INR 100K up for grabs!"
+      },
+      {
+        "subheading": "Bootcamp",
+        "detail": "We bring in industrial experts from different fields to conduct mini workshops to provide hands on training for developers to improve their products, also giving a space for them to get tested and be used by some of the best minds in the process."
+      },
+      {
+        "subheading": "Conference",
+        "detail": "Hack For Inclusion aims to spark conversations between the students and get their ideas flowing. Our conference will feature talks from some of the most experienced and sought after people from the developer community."
+      }
+    ]
+  }
+}
